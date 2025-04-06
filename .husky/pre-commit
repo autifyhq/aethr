@@ -1,0 +1,2 @@
+npx generate-license-file && git add THIRD-PARTY-LICENSES
+npx lint-staged

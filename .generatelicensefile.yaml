@@ -1,0 +1,11 @@
+inputs:
+  - ./package.json
+output: ./THIRD-PARTY-LICENSES
+overwrite: true
+eol: lf
+ci: true
+no-spinner: true
+replace:
+  type-fest: https://raw.githubusercontent.com/sindresorhus/type-fest/main/license-mit
+exclude:
+  - aethr

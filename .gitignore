@@ -1,0 +1,83 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+lib/
+out/
+*.tsbuildinfo
+
+# Environment variables and secrets
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Cache directories
+.npm
+.eslintcache
+.cache
+.parcel-cache
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# IDE and editor files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+.DS_Store
+.directory
+.Trash-*
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Package manager files
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Optional: keep these if you want to commit lockfiles
+# !yarn.lock
+# !package-lock.json
+
+# Playwright specific
+playwright-report/
+test-results/
+/playwright/.cache/
+
+# TypeScript incremental compilation
+*.tsbuildinfo
+
+*.tgz
+*.zip
+Makefile
+logs/
+aethr.config.mjs

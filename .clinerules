@@ -1,0 +1,27 @@
+# Cline Rules for Aethr
+
+## Access & Security
+
+- Don't read .env files or other files containing secrets or credentials
+- Don't access sensitive environment variables directly
+
+## Code Quality
+
+- Smaller codebase is better - optimize for concise, maintainable code
+- Use npm run lint:fix to fix eslint errors before making other changes
+- Maintain TypeScript strict mode compliance
+- Utilize type inference as much as possible
+- Follow existing code patterns and architectural decisions
+
+## Development Approach
+
+- Prioritize modular architecture with clean interfaces
+- Follow test-driven development practices when possible
+- Ensure proper error handling with useful messages
+- Maintain compatibility with Node.js v22+
+
+## Project Guidelines
+
+- Use LangChain/LangGraph for ReAct agent implementation
+- Use Pino for terminal UI components
+- Support multi-LLM providers via environment variables
