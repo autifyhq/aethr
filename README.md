@@ -27,7 +27,7 @@ Aethr is a command-line AI agent that runs natural language test scenarios with 
 
 - Install Node.js 22+ by any method you like
 - Setup API keys or credentials for one of LLM providers below:
-  - OpenAIm OpenRouter, Anthropic, Amazon Bedrock, Google GenAI, Google VertexAI, Azure OpenAI, Groq, Cohere, Ollama
+  - OpenAI, OpenRouter, Anthropic, Amazon Bedrock, Google GenAI, Google VertexAI, Azure OpenAI, Groq, Cohere, Ollama
 - Put model name and keys/credentials in environment variables (or `.env` file)
 
   ```shell
@@ -168,8 +168,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - run: npx -p @aethr/playwright-mcp playwright install chromium --with-deps --only-shell
-      - run: npx aethr run ./example/login.md
+      - run: npx -y -p @aethr/playwright-mcp playwright install chromium --with-deps --only-shell
+      - run: npx -y aethr run ./example/login.md
         env:
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL}}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -183,8 +183,8 @@ jobs:
           path: trace
       - uses: actions/upload-artifact@v4
         with:
-          name: log
-          path: log
+          name: logs
+          path: logs
 ```
 
 ## Development
