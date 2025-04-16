@@ -8,7 +8,13 @@ Aethr is a command-line AI agent that runs natural language test scenarios with 
 
 ## Demo
 
-TODO
+### Success example
+
+![Aethr demo for successful scenario](https://github.com/autifyhq/aethr-demo/blob/main/success.gif)
+
+### Failure example
+
+![Aethr demo for failed scenario](https://github.com/autifyhq/aethr-demo/blob/main/failure.gif)
 
 ## Features
 
