@@ -24,17 +24,17 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.24.0",
-    "@types/node": "^22.14.1",
-    "eslint": "^9.24.0",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "generate-license-file": "^4.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
     "prettier": "3.5.3",
-    "tsx": "^4.19.3",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.30.1",
+    "typescript-eslint": "^8.31.1",
     "zod-to-json-schema": "^3.24.5"
   },
   "scripts": {
@@ -55,18 +55,18 @@
   },
   "dependencies": {
     "@commander-js/extra-typings": "^13.1.0",
-    "@langchain/anthropic": "^0.3.17",
-    "@langchain/aws": "^0.1.8",
+    "@langchain/anthropic": "^0.3.19",
+    "@langchain/aws": "^0.1.9",
     "@langchain/cohere": "^0.3.3",
-    "@langchain/core": "^0.3.44",
-    "@langchain/google-genai": "^0.2.3",
-    "@langchain/google-vertexai": "^0.2.4",
+    "@langchain/core": "^0.3.50",
+    "@langchain/google-genai": "^0.2.5",
+    "@langchain/google-vertexai": "^0.2.5",
     "@langchain/groq": "^0.2.2",
-    "@langchain/langgraph": "^0.2.64",
+    "@langchain/langgraph": "^0.2.67",
     "@langchain/mcp-adapters": "^0.4.2",
     "@langchain/ollama": "^0.2.0",
-    "@langchain/openai": "^0.5.5",
-    "@modelcontextprotocol/sdk": "^1.9.0",
+    "@langchain/openai": "^0.5.8",
+    "@modelcontextprotocol/sdk": "^1.10.2",
     "chalk": "^5.4.1",
     "cli-truncate": "^4.0.0",
     "commander": "^13.1.0",
@@ -75,6 +75,6 @@
     "pino-pretty": "^13.0.0",
     "strip-ansi": "^7.1.0",
     "tempy": "^3.1.0",
-    "zod": "^3.24.2"
+    "zod": "^3.24.3"
   }
 }
