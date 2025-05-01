@@ -28,12 +28,6 @@ const patchClientClose = (name: string, client: Client) => {
   const originalClose = client.close.bind(client);
   client.close = async () => {
     logMcpClientClose(name);
-    // TODO: Better way to handle this case
-    // Currently, our patch doesn't handle trace output well when MCP server is closed
-    // so that we need to call browser_close tool explicitly.
-    const { tools } = await client.listTools();
-    if (tools.find(({ name }) => name === "browser_close"))
-      await client.callTool({ name: "browser_close" });
     await originalClose();
   };
 };
