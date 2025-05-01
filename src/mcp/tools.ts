@@ -1,10 +1,11 @@
+import { ToolMessage } from "@langchain/core/messages";
 import { StructuredToolInterface } from "@langchain/core/tools";
 import { loadMcpTools } from "@langchain/mcp-adapters";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import type { JsonSchema7ObjectType } from "zod-to-json-schema";
 
 import { thinkTool } from "../agent/agent.js";
-import { logMcpCall, logMcpTools } from "../ui/mcp-tools.js";
+import { logMcpEnd, logMcpStart, logMcpTools } from "../ui/mcp-tools.js";
 import { createMcpClient } from "./client.js";
 import { McpServersConfig } from "./config.js";
 
@@ -57,7 +58,12 @@ const createTools = async (
 // Patch tool.invoke for better logging.
 const patchToolInvoke = (tool: StructuredToolInterface) => {
   const originalInvoke = tool.invoke.bind(tool);
-  tool.invoke = async (...args) => logMcpCall(tool, args, originalInvoke);
+  tool.invoke = async (...args) => {
+    const start = logMcpStart(tool, args);
+    const result = (await originalInvoke(...args)) as ToolMessage;
+    logMcpEnd(tool, start, result);
+    return result;
+  };
 };
 
 // Patch tool.schema for adding reasoning parameter.

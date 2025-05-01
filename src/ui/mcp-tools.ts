@@ -1,6 +1,6 @@
 import { performance } from "node:perf_hooks";
 
-import { MessageContent, ToolMessage } from "@langchain/core/messages";
+import { ToolMessage } from "@langchain/core/messages";
 import { StructuredToolInterface } from "@langchain/core/tools";
 import truncate from "cli-truncate";
 
@@ -23,36 +23,20 @@ export const logMcpTools = (tools: Tool[]) => {
   );
 };
 
-export const logMcpCall = async (
+export const logMcpStart = (
   tool: Tool,
   args: Parameters<Tool["invoke"]>,
-  invoke: (...args: Parameters<Tool["invoke"]>) => Promise<unknown>,
-) => {
+): number => {
   logger.info({ input: args[0] }, `MCP start: ${tool.name}`);
-  const start = performance.now();
-  const result = (await invoke(...args)) as ToolMessage;
-  const end = performance.now();
-  const duration = elapsed(start, end);
-  const content = concatTextContent(result.content);
-  const truncated = truncate(content, 100);
-  logger.info({ content: truncated }, `MCP end:   ${tool.name} (${duration})`);
-  logger.debug(`MCP end:   ${tool.name} (${duration})\n${content}`);
-  result.content = content;
-  return result;
+  return performance.now();
 };
 
-const concatTextContent = (content: MessageContent): string => {
-  // If the content is a string, return it directly
-  if (typeof content === "string") return content;
-
-  // If the content is array, filter only text type content and join them with new lines
-  if (Array.isArray(content))
-    return content
-      .flatMap((content) => (typeof content === "string" ? [content] : []))
-      .join("\n");
-
-  // Fallback to JSON.stringify for the other unknown types in case the type will be evolved
-  return JSON.stringify(content);
+export const logMcpEnd = (tool: Tool, start: number, result: ToolMessage) => {
+  const end = performance.now();
+  const duration = elapsed(start, end);
+  const truncated = truncate(JSON.stringify(result.content), 200);
+  logger.info({ content: truncated }, `MCP end:   ${tool.name} (${duration})`);
+  logger.debug(`MCP end:   ${tool.name}\n${JSON.stringify(result.content)}`);
 };
 
 export const logMcpClientStdioStart = (
