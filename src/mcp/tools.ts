@@ -5,7 +5,12 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import type { JsonSchema7ObjectType } from "zod-to-json-schema";
 
 import { thinkTool } from "../agent/agent.js";
-import { logMcpEnd, logMcpStart, logMcpTools } from "../ui/mcp-tools.js";
+import {
+  logMcpEnd,
+  logMcpEndError,
+  logMcpStart,
+  logMcpTools,
+} from "../ui/mcp-tools.js";
 import { createMcpClient } from "./client.js";
 import { McpServersConfig } from "./config.js";
 
@@ -60,9 +65,14 @@ const patchToolInvoke = (tool: StructuredToolInterface) => {
   const originalInvoke = tool.invoke.bind(tool);
   tool.invoke = async (...args) => {
     const start = logMcpStart(tool, args);
-    const result = (await originalInvoke(...args)) as ToolMessage;
-    logMcpEnd(tool, start, result);
-    return result;
+    try {
+      const result = (await originalInvoke(...args)) as ToolMessage;
+      logMcpEnd(tool, start, result);
+      return result;
+    } catch (error) {
+      logMcpEndError(tool, start, error);
+      throw error;
+    }
   };
 };
 
