@@ -2,6 +2,7 @@ import { performance } from "node:perf_hooks";
 
 import { ToolMessage } from "@langchain/core/messages";
 import { StructuredToolInterface } from "@langchain/core/tools";
+import chalk from "chalk";
 import truncate from "cli-truncate";
 
 import { logger } from "./logger.js";
@@ -37,6 +38,16 @@ export const logMcpEnd = (tool: Tool, start: number, result: ToolMessage) => {
   const truncated = truncate(JSON.stringify(result.content), 200);
   logger.info({ content: truncated }, `MCP end:   ${tool.name} (${duration})`);
   logger.debug(`MCP end:   ${tool.name}\n${JSON.stringify(result.content)}`);
+};
+
+export const logMcpEndError = (tool: Tool, start: number, cause: unknown) => {
+  const end = performance.now();
+  const duration = elapsed(start, end);
+  const error = cause instanceof Error ? cause : new Error(String(cause));
+  logger.info(
+    `MCP end:   ${tool.name} (${duration}) ${chalk.yellow(error.message)}`,
+  );
+  logger.debug(error, `MCP end:   ${tool.name}`);
 };
 
 export const logMcpClientStdioStart = (
