@@ -23,6 +23,19 @@ Aethr is a command-line AI agent that runs natural language test scenarios with 
 - MCP tool calling to automate test execution
 - CLI-based i.e. CI friendly
 
+## Getting started
+
+Assuming you have Node.js installed and an OpenAI key that can access your `gpt-4.1-mini` model on macOS or Linux:
+
+```sh
+export OPENAI_API_KEY=sk-....
+export OPENAI_MODEL=gpt-4.1-mini
+npx -y aethr@latest run https://raw.githubusercontent.com/autifyhq/aethr/main/demo.md
+```
+
+> [!NOTE]
+> See how to setup for the other LLM providers in Prerequisites section.
+
 ## Prerequisites
 
 - Install Node.js 22+ by any method you like
@@ -30,43 +43,66 @@ Aethr is a command-line AI agent that runs natural language test scenarios with 
   - OpenAI, OpenRouter, Anthropic, Amazon Bedrock, Google GenAI, Google VertexAI, Azure OpenAI, Groq, Cohere, Ollama
 - Put model name and keys/credentials in environment variables (or `.env` file)
 
-  ```shell
-  # Model names here are just examples.
-  # As long as the model supports tool calling, you can try it out with Aethr.
+<details>
+<summary>Environment variable setup</summary>
 
-  OPENAI_MODEL=gpt-4o-mini
-  OPENAI_API_KEY=
-  # or
-  OPENROUTER_MODEL=openai/gpt-4o-mini
-  OPENROUTER_API_KEY=
-  # or
-  ANTHROPIC_MODEL=claude-3-7-sonnet-20250219
-  ANTHROPIC_API_KEY=
-  # or
-  BEDROCK_MODEL=us.amazon.nova-pro-v1:0
-  AWS_PROFILE=
-  AWS_DEFAULT_REGION=
-  # or
-  GOOGLE_MODEL=gemini-1.5-flash-8b
-  GOOGLE_API_KEY=
-  # or
-  VERTEXAI_MODEL=gemini-2.0-flash-exp
-  GOOGLE_CLOUD_PROJECT=
-  # or
-  AZURE_OPENAI_MODEL=gpt-4o-mini
-  AZURE_OPENAI_API_KEY=
-  AZURE_OPENAI_API_INSTANCE_NAME=
-  AZURE_OPENAI_API_DEPLOYMENT_NAME=
-  AZURE_OPENAI_API_VERSION=
-  # or
-  GROQ_MODEL=llama-3.1-8b-instant
-  GROQ_API_KEY=
-  # or
-  COHERE_MODEL=command-r7b-12-2024
-  COHERE_API_KEY=
-  # or
-  OLLAMA_MODEL=llama3.2
-  ```
+```shell
+# Model names here are just examples.
+# As long as the model supports tool calling, you can try it out with Aethr.
+
+OPENAI_MODEL=gpt-4o-mini
+OPENAI_API_KEY=
+
+# or
+
+OPENROUTER_MODEL=openai/gpt-4o-mini
+OPENROUTER_API_KEY=
+
+# or
+
+ANTHROPIC_MODEL=claude-3-7-sonnet-20250219
+ANTHROPIC_API_KEY=
+
+# or
+
+BEDROCK_MODEL=us.amazon.nova-pro-v1:0
+AWS_PROFILE=
+AWS_DEFAULT_REGION=
+
+# or
+
+GOOGLE_MODEL=gemini-1.5-flash-8b
+GOOGLE_API_KEY=
+
+# or
+
+VERTEXAI_MODEL=gemini-2.0-flash-exp
+GOOGLE_CLOUD_PROJECT=
+
+# or
+
+AZURE_OPENAI_MODEL=gpt-4o-mini
+AZURE_OPENAI_API_KEY=
+AZURE_OPENAI_API_INSTANCE_NAME=
+AZURE_OPENAI_API_DEPLOYMENT_NAME=
+AZURE_OPENAI_API_VERSION=
+
+# or
+
+GROQ_MODEL=llama-3.1-8b-instant
+GROQ_API_KEY=
+
+# or
+
+COHERE_MODEL=command-r7b-12-2024
+COHERE_API_KEY=
+
+# or
+
+OLLAMA_MODEL=llama3.2
+```
+
+</details>
 
 ## Usage
 
