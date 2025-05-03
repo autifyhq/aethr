@@ -6,6 +6,10 @@
   "author": {
     "name": "Autify Inc."
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autifyhq/aethr.git"
+  },
   "main": "dist/index.js",
   "type": "module",
   "bin": {
