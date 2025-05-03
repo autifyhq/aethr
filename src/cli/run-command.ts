@@ -1,5 +1,3 @@
-import fs from "node:fs";
-
 import { temporaryDirectoryTask } from "tempy";
 
 import { invokeAgent } from "../agent/agent.js";
@@ -10,6 +8,7 @@ import {
   initializeDefaultConfigFile,
   readConfigFile,
 } from "../config/default.js";
+import { loadTestFile } from "../file/file.js";
 import { createModel } from "../llm/model.js";
 import { createMcpTools } from "../mcp/tools.js";
 import { createMetrics } from "../metrics/metrics.js";
@@ -42,9 +41,7 @@ export async function runCommand(
     const metrics = createMetrics(model);
     metrics.onUsage(logUsage);
 
-    logger.info(`Reading test file: ${filePath}`);
-    const fileContent = fs.readFileSync(filePath, "utf-8");
-    logger.info(`Test file:\n${fileContent}`);
+    const fileContent = await loadTestFile(filePath);
     const input = { messages: [{ role: "user", content: fileContent }] };
 
     const mcpTools = await createMcpTools(profile.mcpServers, {

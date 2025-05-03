@@ -20,7 +20,7 @@ program
 program
   .command("run")
   .description("Run a test scenario file")
-  .argument("<file>", "Path to test scenario file")
+  .argument("<file>", "Path to test scenario file, local file path or URL")
   .option("-c --config-file <file>", "Config file path", defaultConfigPath)
   .option("-p --profile <name>", "Profile name", defaultProfile)
   .option(
