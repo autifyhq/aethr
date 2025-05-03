@@ -30,6 +30,9 @@ Assuming you have Node.js installed and an OpenAI key that can access your `gpt-
 ```sh
 export OPENAI_API_KEY=sk-....
 export OPENAI_MODEL=gpt-4.1-mini
+mkdir aethr-test && cd aethr-test
+# The 'aethr-test' directory is created to serve as a workspace to store aethr.config.mjs and 'logs'
+# You can replace 'aethr-test' with any directory name of your choice.
 npx -y aethr@latest run https://raw.githubusercontent.com/autifyhq/aethr/main/demo.md
 ```
 
