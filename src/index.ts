@@ -34,7 +34,13 @@ program
   .action(async (file, options) => {
     logger.info(`Aethr v${pkg.version}`);
     logger.info(options, `Run command: ${file}`);
-    process.exitCode = await runCommand(file, options);
+    try {
+      process.exitCode = await runCommand(file, options);
+    } catch (e) {
+      const error = e instanceof Error ? e : new Error(String(e));
+      logger.error(error, `Error on run command for file: ${file}`);
+      process.exitCode = 1;
+    }
   });
 
 program.parse();
