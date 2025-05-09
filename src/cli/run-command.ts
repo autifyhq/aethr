@@ -44,7 +44,7 @@ export async function runCommand(
     const fileContent = await loadTestFile(filePath);
     const input = { messages: [{ role: "user", content: fileContent }] };
 
-    const mcpTools = await createMcpTools(profile.mcpServers, {
+    const mcpTools = await createMcpTools(profile.mcpServers, model, {
       thinkTool,
       reasoning,
       tempDir,

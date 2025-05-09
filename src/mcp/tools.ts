@@ -5,6 +5,7 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import type { JsonSchema7ObjectType } from "zod-to-json-schema";
 
 import { thinkTool } from "../agent/agent.js";
+import { Model } from "../llm/model.js";
 import {
   logMcpEnd,
   logMcpEndError,
@@ -16,6 +17,7 @@ import { McpServersConfig } from "./config.js";
 
 export const createMcpTools = async (
   config: McpServersConfig,
+  model: Model,
   options: { thinkTool: boolean; reasoning: boolean; tempDir: string },
 ): Promise<{
   tools: StructuredToolInterface[];
@@ -27,7 +29,7 @@ export const createMcpTools = async (
       Object.entries(config).map(async ([name, serverConfig]) => {
         const client = await createMcpClient(name, serverConfig, options);
         clients.push(client);
-        return await createTools(name, client, options);
+        return await createTools(name, client, model, options);
       }),
     )
   ).flat();
@@ -46,6 +48,7 @@ export const createMcpTools = async (
 const createTools = async (
   name: string,
   client: Client,
+  model: Model,
   options: { reasoning?: boolean } = {},
 ): Promise<StructuredToolInterface[]> => {
   const mcpTools = await loadMcpTools(name, client, {
@@ -54,20 +57,27 @@ const createTools = async (
     additionalToolNamePrefix: "",
   });
   return mcpTools.map((tool) => {
-    patchToolInvoke(tool);
+    patchToolInvoke(tool, model);
     if (options.reasoning) patchToolSchemaReasoning(tool);
     return tool;
   });
 };
 
 // Patch tool.invoke for better logging.
-const patchToolInvoke = (tool: StructuredToolInterface) => {
+const patchToolInvoke = (tool: StructuredToolInterface, model: Model) => {
   const originalInvoke = tool.invoke.bind(tool);
   tool.invoke = async (...args) => {
     const start = logMcpStart(tool, args);
     try {
       const result = (await originalInvoke(...args)) as ToolMessage;
       logMcpEnd(tool, start, result);
+      // Workaround for the models that reject non-string content.
+      // The same workaround is used by OpenAI client.
+      if (model.provider === "ollama")
+        result.content =
+          typeof result.content === "string"
+            ? result.content
+            : JSON.stringify(result.content);
       return result;
     } catch (error) {
       logMcpEndError(tool, start, error);
