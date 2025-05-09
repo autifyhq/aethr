@@ -6,6 +6,7 @@ import type { JsonSchema7ObjectType } from "zod-to-json-schema";
 
 import { thinkTool } from "../agent/agent.js";
 import { Model } from "../llm/model.js";
+import { logger } from "../ui/logger.js";
 import {
   logMcpEnd,
   logMcpEndError,
@@ -29,7 +30,10 @@ export const createMcpTools = async (
       Object.entries(config).map(async ([name, serverConfig]) => {
         const client = await createMcpClient(name, serverConfig, options);
         clients.push(client);
-        return await createTools(name, client, model, options);
+        return await createTools(name, client, model, {
+          ...options,
+          exclude: serverConfig.exclude,
+        });
       }),
     )
   ).flat();
@@ -49,18 +53,30 @@ const createTools = async (
   name: string,
   client: Client,
   model: Model,
-  options: { reasoning?: boolean } = {},
+  options: { exclude?: string[]; reasoning?: boolean } = {},
 ): Promise<StructuredToolInterface[]> => {
   const mcpTools = await loadMcpTools(name, client, {
     throwOnLoadError: true,
     prefixToolNameWithServerName: true,
     additionalToolNamePrefix: "",
   });
-  return mcpTools.map((tool) => {
-    patchToolInvoke(tool, model);
-    if (options.reasoning) patchToolSchemaReasoning(tool);
-    return tool;
-  });
+  return mcpTools
+    .filter((tool) => {
+      const prefix = `${name}__`;
+      if (!tool.name.startsWith(prefix)) {
+        logger.warn(
+          `Tool name "${tool.name}" does not start with the expected prefix "${prefix}". Skipping tool.`,
+        );
+        return false;
+      }
+      const toolName = tool.name.slice(prefix.length);
+      return !(options.exclude ?? []).includes(toolName);
+    })
+    .map((tool) => {
+      patchToolInvoke(tool, model);
+      if (options.reasoning) patchToolSchemaReasoning(tool);
+      return tool;
+    });
 };
 
 // Patch tool.invoke for better logging.
