@@ -48,7 +48,10 @@
     "dev": "tsx src/index.ts",
     "start": "npx -y $(npm pack | tail -1)",
     "lint": "eslint . --ext .ts,.tsx --fix",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "act": "act pull_request --container-architecture linux/amd64 --env CI=true --env-file '' --secret-file .env --rm --artifact-server-path .artifacts",
+    "e2e:openrouter:openai": "npm run act -- -j openrouter --var OPENROUTER_MODELS='[\"openai/gpt-4.1-mini\"]'",
+    "e2e:openrouter:google": "npm run act -- -j openrouter --var OPENROUTER_MODELS='[\"google/gemini-2.5-flash-preview\"]'"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

@@ -8,5 +8,5 @@ Follow the steps below.
 2. Enter ${MY_USERNAME} to the Username
 3. Enter ${MY_PASSWORD} to the Password
 4. Click login button
-5. Assert the button shows "Logout"
-6. Assert "You logged into a secure area!" text exists
+5. Assert "You logged into a secure area!" text exists
+6. Assert the button shows "Logout"

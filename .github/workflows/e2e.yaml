@@ -1,0 +1,67 @@
+name: E2E tests
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  openrouter:
+    name: Test login for OpenRouter/${{ matrix.model }}
+
+    strategy:
+      matrix:
+        model: ${{ fromJson(vars.OPENROUTER_MODELS) }}
+
+    services:
+      web:
+        image: gprestes/the-internet
+        ports:
+          - 7080:5000
+        options: --workdir /app # A workaround for act's bug for local testing
+
+    runs-on: ubuntu-latest
+
+    env:
+      OPENROUTER_MODEL: ${{ matrix.model }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      URL: http://localhost:7080/login
+      MY_USERNAME: tomsmith
+      MY_PASSWORD: "SuperSecretPassword!"
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install browser deps for playwright-mcp
+        run: npx -p @aethr/playwright-mcp@latest playwright install-deps chromium
+      - name: Install dependencies
+        run: npm ci
+      - name: Run with ${{ matrix.model }}
+        run: npm run start -- run examples/login.test.md
+      - name: Extract trace.zip (to avoid double zipping)
+        if: always()
+        run: mkdir -p trace && unzip trace.zip -d trace
+      - name: Sanitize model without forward slashes
+        id: sanitize
+        run: |
+          MODEL=$(echo "${{ matrix.model }}" | tr '/' '_')
+          echo "model=${MODEL}" >> $GITHUB_OUTPUT
+      - name: Archive trace.zip
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-${{ steps.sanitize.outputs.model }}
+          path: trace
+      - name: Archive logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-${{ steps.sanitize.outputs.model }}
+          path: logs
