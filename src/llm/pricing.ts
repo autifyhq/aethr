@@ -57,11 +57,15 @@ const pricing: Record<
       cachedRead: 0.075,
       cachedWrite: 0.0,
     },
-    "anthropic/claude-3-haiku": {
-      input: 0.25,
-      output: 1.25,
-      cachedRead: 0.03,
-      cachedWrite: 0.3,
+    "openai/gpt-4.1": {
+      input: 2.0,
+      output: 8.0,
+      cachedRead: 0.5,
+    },
+    "openai/gpt-4.1-mini": {
+      input: 0.4,
+      output: 1.6,
+      cachedRead: 0.1,
     },
     "google/gemini-2.0-flash-001": {
       input: 0.1,
@@ -73,11 +77,17 @@ const pricing: Record<
       input: 0.075,
       output: 0.3,
     },
-    "anthropic/claude-3.7-sonnet": {
-      input: 3.0,
-      output: 15.0,
-      cachedRead: 0.3,
-      cachedWrite: 3.75,
+    "google/gemini-2.5-flash-preview": {
+      input: 0.15,
+      output: 0.6,
+      cachedRead: 0.0,
+      cachedWrite: 0.0,
+    },
+    "google/gemini-2.5-pro-preview": {
+      // TODO: Support tiered pricing
+      input: 1.25,
+      output: 10.0,
+      cachedRead: 0.31,
     },
     "deepseek/deepseek-chat": {
       input: 0.4,
@@ -181,6 +191,18 @@ const pricing: Record<
       input: 0.075,
       output: 0.3,
     },
+    "gemini-2.5-flash-preview": {
+      input: 0.15,
+      output: 0.6,
+      cachedRead: 0.0,
+      cachedWrite: 0.0,
+    },
+    "gemini-2.5-pro-preview": {
+      // TODO: Support tiered pricing
+      input: 1.25,
+      output: 10.0,
+      cachedRead: 0.31,
+    },
   },
   vertexai: {
     "claude-3-7-sonnet@20250219": {
@@ -224,6 +246,18 @@ const pricing: Record<
       output: 0.3,
       cachedRead: 0.025,
       cachedWrite: 0.025,
+    },
+    "gemini-2.5-flash-preview": {
+      input: 0.15,
+      output: 0.6,
+      cachedRead: 0.0,
+      cachedWrite: 0.0,
+    },
+    "gemini-2.5-pro-preview": {
+      // TODO: Support tiered pricing
+      input: 1.25,
+      output: 10.0,
+      cachedRead: 0.31,
     },
   },
   groq: {
