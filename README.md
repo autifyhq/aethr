@@ -55,6 +55,7 @@ npx -y aethr@latest run https://raw.githubusercontent.com/autifyhq/aethr/main/de
 
 OPENAI_MODEL=gpt-4o-mini
 OPENAI_API_KEY=
+OPENAI_API_BASE_URL= # Optional, if you want to use a custom OpenAI API endpoint
 
 # or
 

@@ -51,7 +51,12 @@ const selectModel = (env: NodeJS.ProcessEnv): Model => {
   if (env.OPENAI_MODEL)
     return {
       provider: "openai",
-      llm: new ChatOpenAI({ model: env.OPENAI_MODEL }),
+      llm: new ChatOpenAI({
+        model: env.OPENAI_MODEL,
+        configuration: {
+          baseURL: env.OPENAI_API_BASE_URL ?? "https://api.openai.com/v1",
+        },
+      }),
     };
   if (env.OPENROUTER_MODEL)
     return {
