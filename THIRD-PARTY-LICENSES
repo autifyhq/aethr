@@ -553,7 +553,7 @@ Apache License
 
 The following npm package may be included in this product:
 
- - openai@4.96.2
+ - openai@4.104.0
 
 This package contains the following license:
 
@@ -976,23 +976,23 @@ Apache License
 
 The following npm packages may be included in this product:
 
- - @aws-sdk/client-cognito-identity@3.799.0
- - @aws-sdk/client-kendra@3.799.0
- - @aws-sdk/client-sagemaker@3.799.0
- - @aws-sdk/client-sso@3.799.0
- - @aws-sdk/credential-provider-cognito-identity@3.799.0
- - @aws-sdk/middleware-eventstream@3.775.0
- - @aws-sdk/util-user-agent-browser@3.775.0
- - @aws-sdk/util-user-agent-node@3.799.0
+ - @aws-sdk/client-cognito-identity@3.823.0
+ - @aws-sdk/client-kendra@3.823.0
+ - @aws-sdk/client-sagemaker@3.823.0
+ - @aws-sdk/client-sso@3.823.0
+ - @aws-sdk/credential-provider-cognito-identity@3.823.0
+ - @aws-sdk/middleware-eventstream@3.821.0
+ - @aws-sdk/util-user-agent-browser@3.821.0
+ - @aws-sdk/util-user-agent-node@3.823.0
  - @smithy/eventstream-codec@1.1.0
- - @smithy/eventstream-codec@4.0.2
- - @smithy/middleware-retry@4.1.1
- - @smithy/querystring-builder@4.0.2
- - @smithy/querystring-parser@4.0.2
- - @smithy/service-error-classification@4.0.2
- - @smithy/url-parser@4.0.2
- - @smithy/util-defaults-mode-browser@4.0.9
- - @smithy/util-defaults-mode-node@4.0.9
+ - @smithy/eventstream-codec@4.0.4
+ - @smithy/middleware-retry@4.1.10
+ - @smithy/querystring-builder@4.0.4
+ - @smithy/querystring-parser@4.0.4
+ - @smithy/service-error-classification@4.0.5
+ - @smithy/url-parser@4.0.4
+ - @smithy/util-defaults-mode-browser@4.0.17
+ - @smithy/util-defaults-mode-node@4.0.17
 
 These packages each contain the following license:
 
@@ -1202,8 +1202,8 @@ Apache License
 
 The following npm packages may be included in this product:
 
- - @aws-sdk/client-bedrock-agent-runtime@3.800.0
- - @aws-sdk/client-bedrock-runtime@3.799.0
+ - @aws-sdk/client-bedrock-agent-runtime@3.823.0
+ - @aws-sdk/client-bedrock-runtime@3.823.0
 
 These packages each contain the following license:
 
@@ -1413,23 +1413,23 @@ Apache License
 
 The following npm packages may be included in this product:
 
- - @aws-sdk/eventstream-handler-node@3.775.0
- - @aws-sdk/middleware-host-header@3.775.0
- - @aws-sdk/middleware-recursion-detection@3.775.0
- - @aws-sdk/middleware-user-agent@3.799.0
+ - @aws-sdk/eventstream-handler-node@3.821.0
+ - @aws-sdk/middleware-host-header@3.821.0
+ - @aws-sdk/middleware-recursion-detection@3.821.0
+ - @aws-sdk/middleware-user-agent@3.823.0
  - @aws-sdk/protocol-http@3.374.0
- - @smithy/core@3.3.0
- - @smithy/eventstream-serde-browser@4.0.2
- - @smithy/eventstream-serde-config-resolver@4.1.0
- - @smithy/eventstream-serde-node@4.0.2
- - @smithy/eventstream-serde-universal@4.0.2
- - @smithy/invalid-dependency@4.0.2
- - @smithy/middleware-serde@4.0.3
+ - @smithy/core@3.5.1
+ - @smithy/eventstream-serde-browser@4.0.4
+ - @smithy/eventstream-serde-config-resolver@4.1.2
+ - @smithy/eventstream-serde-node@4.0.4
+ - @smithy/eventstream-serde-universal@4.0.4
+ - @smithy/invalid-dependency@4.0.4
+ - @smithy/middleware-serde@4.0.8
  - @smithy/protocol-http@1.2.0
- - @smithy/protocol-http@5.1.0
- - @smithy/smithy-client@4.2.1
+ - @smithy/protocol-http@5.1.2
+ - @smithy/smithy-client@4.4.1
  - @smithy/types@1.2.0
- - @smithy/types@4.2.0
+ - @smithy/types@4.3.1
 
 These packages each contain the following license:
 
@@ -1641,8 +1641,8 @@ The following npm packages may be included in this product:
 
  - @types/json-schema@7.0.15
  - @types/node-fetch@2.6.12
- - @types/node@18.19.87
- - @types/node@22.15.3
+ - @types/node@18.19.110
+ - @types/node@22.15.29
  - @types/uuid@10.0.0
  - @types/uuid@9.0.8
 
@@ -2412,7 +2412,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - debug@4.4.0
+ - debug@4.4.1
 
 This package contains the following license:
 
@@ -3065,33 +3065,34 @@ Apache License
 
 The following npm packages may be included in this product:
 
- - @aws-sdk/credential-provider-env@3.799.0
- - @aws-sdk/credential-provider-ini@3.799.0
- - @aws-sdk/credential-provider-node@3.799.0
- - @aws-sdk/credential-providers@3.799.0
- - @aws-sdk/region-config-resolver@3.775.0
+ - @aws-sdk/credential-provider-env@3.823.0
+ - @aws-sdk/credential-provider-ini@3.823.0
+ - @aws-sdk/credential-provider-node@3.823.0
+ - @aws-sdk/credential-providers@3.823.0
+ - @aws-sdk/region-config-resolver@3.821.0
  - @aws-sdk/signature-v4@3.374.0
- - @aws-sdk/token-providers@3.799.0
- - @aws-sdk/types@3.775.0
- - @aws-sdk/util-endpoints@3.787.0
- - @aws-sdk/util-locate-window@3.723.0
+ - @aws-sdk/token-providers@3.823.0
+ - @aws-sdk/types@3.821.0
+ - @aws-sdk/util-endpoints@3.821.0
+ - @aws-sdk/util-locate-window@3.804.0
  - @aws-sdk/util-utf8-browser@3.259.0
- - @smithy/abort-controller@4.0.2
- - @smithy/config-resolver@4.1.0
- - @smithy/credential-provider-imds@4.0.2
- - @smithy/fetch-http-handler@5.0.2
- - @smithy/hash-node@4.0.2
+ - @aws-sdk/xml-builder@3.821.0
+ - @smithy/abort-controller@4.0.4
+ - @smithy/config-resolver@4.1.4
+ - @smithy/credential-provider-imds@4.0.6
+ - @smithy/fetch-http-handler@5.0.4
+ - @smithy/hash-node@4.0.4
  - @smithy/is-array-buffer@1.1.0
  - @smithy/is-array-buffer@2.2.0
  - @smithy/is-array-buffer@4.0.0
- - @smithy/middleware-content-length@4.0.2
- - @smithy/middleware-endpoint@4.1.1
- - @smithy/middleware-stack@4.0.2
- - @smithy/node-http-handler@4.0.4
- - @smithy/property-provider@4.0.2
- - @smithy/shared-ini-file-loader@4.0.2
+ - @smithy/middleware-content-length@4.0.4
+ - @smithy/middleware-endpoint@4.1.9
+ - @smithy/middleware-stack@4.0.4
+ - @smithy/node-http-handler@4.0.6
+ - @smithy/property-provider@4.0.4
+ - @smithy/shared-ini-file-loader@4.0.4
  - @smithy/signature-v4@1.1.0
- - @smithy/signature-v4@5.1.0
+ - @smithy/signature-v4@5.1.2
  - @smithy/util-base64@4.0.0
  - @smithy/util-body-length-browser@4.0.0
  - @smithy/util-body-length-node@4.0.0
@@ -3100,13 +3101,13 @@ The following npm packages may be included in this product:
  - @smithy/util-buffer-from@4.0.0
  - @smithy/util-hex-encoding@1.1.0
  - @smithy/util-hex-encoding@4.0.0
- - @smithy/util-stream@4.2.0
+ - @smithy/util-stream@4.2.2
  - @smithy/util-uri-escape@1.1.0
  - @smithy/util-uri-escape@4.0.0
  - @smithy/util-utf8@1.1.0
  - @smithy/util-utf8@2.3.0
  - @smithy/util-utf8@4.0.0
- - @smithy/util-waiter@4.0.3
+ - @smithy/util-waiter@4.0.5
 
 These packages each contain the following license:
 
@@ -3316,9 +3317,9 @@ Apache License
 
 The following npm packages may be included in this product:
 
- - @aws-sdk/credential-provider-process@3.799.0
- - @aws-sdk/credential-provider-sso@3.799.0
- - @aws-sdk/credential-provider-web-identity@3.799.0
+ - @aws-sdk/credential-provider-process@3.823.0
+ - @aws-sdk/credential-provider-sso@3.823.0
+ - @aws-sdk/credential-provider-web-identity@3.823.0
 
 These packages each contain the following license:
 
@@ -3528,8 +3529,8 @@ Apache License
 
 The following npm packages may be included in this product:
 
- - @aws-sdk/middleware-logger@3.775.0
- - @smithy/node-config-provider@4.0.2
+ - @aws-sdk/middleware-logger@3.821.0
+ - @smithy/node-config-provider@4.1.3
  - @smithy/util-config-provider@4.0.0
 
 These packages each contain the following license:
@@ -3740,10 +3741,10 @@ Apache License
 
 The following npm packages may be included in this product:
 
- - @smithy/util-endpoints@3.0.2
+ - @smithy/util-endpoints@3.0.6
  - @smithy/util-middleware@1.1.0
- - @smithy/util-middleware@4.0.2
- - @smithy/util-retry@4.0.2
+ - @smithy/util-middleware@4.0.4
+ - @smithy/util-retry@4.0.5
 
 These packages each contain the following license:
 
@@ -3953,9 +3954,9 @@ Apache License
 
 The following npm packages may be included in this product:
 
- - @aws-sdk/core@3.799.0
- - @aws-sdk/credential-provider-http@3.799.0
- - @aws-sdk/nested-clients@3.799.0
+ - @aws-sdk/core@3.823.0
+ - @aws-sdk/credential-provider-http@3.823.0
+ - @aws-sdk/nested-clients@3.823.0
 
 These packages each contain the following license:
 
@@ -4202,7 +4203,7 @@ SOFTWARE.
 
 The following npm packages may be included in this product:
 
- - jwa@2.0.0
+ - jwa@2.0.1
  - jws@4.0.0
 
 These packages each contain the following license:
@@ -4554,6 +4555,26 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 The following npm package may be included in this product:
 
+ - uri-js@4.4.1
+
+This package contains the following license:
+
+Copyright 2011 Gary Court. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1.	Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2.	Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY GARY COURT "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL GARY COURT OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The views and conclusions contained in the software and documentation are those of the authors and should not be interpreted as representing official policies, either expressed or implied, of Gary Court.
+
+-----------
+
+The following npm package may be included in this product:
+
  - convict@6.2.4
 
 This package contains the following license:
@@ -4624,7 +4645,7 @@ Original Author, when distributed with the Software.
 
 The following npm package may be included in this product:
 
- - @anthropic-ai/sdk@0.37.0
+ - @anthropic-ai/sdk@0.39.0
 
 This package contains the following license:
 
@@ -4710,11 +4731,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 -----------
 
-The following npm package may be included in this product:
+The following npm packages may be included in this product:
 
  - emoji-regex@10.4.0
+ - punycode@2.3.1
 
-This package contains the following license:
+These packages each contain the following license:
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -4767,7 +4789,7 @@ The following npm packages may be included in this product:
 
  - @cfworker/json-schema@4.1.1
  - js-tiktoken@1.0.20
- - langsmith@0.3.23
+ - langsmith@0.3.30
  - tr46@0.0.3
  - undici-types@5.26.5
 
@@ -4938,6 +4960,37 @@ These packages each contain the following license:
 MIT License
 
 Copyright (c) 2017 Amit Kumar Gupta
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-----------
+
+The following npm packages may be included in this product:
+
+ - fast-deep-equal@3.1.3
+ - json-schema-traverse@0.4.1
+
+These packages each contain the following license:
+
+MIT License
+
+Copyright (c) 2017 Evgeny Poberezkin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -5142,43 +5195,13 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - console-table-printer@2.12.1
+ - console-table-printer@2.14.1
 
 This package contains the following license:
 
 MIT License
 
 Copyright (c) 2019 Nahiyan Kamal
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
------------
-
-The following npm package may be included in this product:
-
- - zod@3.24.3
-
-This package contains the following license:
-
-MIT License
-
-Copyright (c) 2020 Colin McDonnell
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -5533,7 +5556,7 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - ollama@0.5.15
+ - ollama@0.5.16
 
 This package contains the following license:
 
@@ -5563,7 +5586,7 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - @modelcontextprotocol/sdk@1.10.2
+ - @modelcontextprotocol/sdk@1.12.1
 
 This package contains the following license:
 
@@ -5660,7 +5683,7 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - @langchain/langgraph-sdk@0.0.74
+ - @langchain/langgraph-sdk@0.0.82
 
 This package contains the following license:
 
@@ -5720,7 +5743,37 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - eventsource-parser@3.0.1
+ - zod@3.25.50
+
+This package contains the following license:
+
+MIT License
+
+Copyright (c) 2025 Colin McDonnell
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-----------
+
+The following npm package may be included in this product:
+
+ - eventsource-parser@3.0.2
 
 This package contains the following license:
 
@@ -5780,7 +5833,7 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - @langchain/mcp-adapters@0.4.2
+ - @langchain/mcp-adapters@0.4.5
 
 This package contains the following license:
 
@@ -5829,7 +5882,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 The following npm package may be included in this product:
 
- - process-warning@4.0.1
+ - process-warning@5.0.0
 
 This package contains the following license:
 
@@ -6183,7 +6236,7 @@ The following npm packages may be included in this product:
 
  - isexe@2.0.0
  - once@1.4.0
- - semver@7.7.1
+ - semver@7.7.2
  - which@2.0.2
  - wrappy@1.0.2
 
@@ -6229,12 +6282,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 The following npm packages may be included in this product:
 
- - @langchain/aws@0.1.9
+ - @langchain/aws@0.1.10
  - @langchain/cohere@0.3.3
- - @langchain/google-common@0.2.5
- - @langchain/google-gauth@0.2.5
- - @langchain/google-genai@0.2.5
- - @langchain/google-vertexai@0.2.5
+ - @langchain/google-common@0.2.10
+ - @langchain/google-gauth@0.2.10
+ - @langchain/google-genai@0.2.10
+ - @langchain/google-vertexai@0.2.10
  - @langchain/groq@0.2.2
  - @langchain/ollama@0.2.0
 
@@ -6266,8 +6319,8 @@ THE SOFTWARE.
 
 The following npm packages may be included in this product:
 
- - @langchain/langgraph-checkpoint@0.0.17
- - @langchain/langgraph@0.2.67
+ - @langchain/langgraph-checkpoint@0.0.18
+ - @langchain/langgraph@0.2.74
 
 These packages each contain the following license:
 
@@ -6297,7 +6350,7 @@ THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - eventsource@3.0.6
+ - eventsource@3.0.7
 
 This package contains the following license:
 
@@ -6328,9 +6381,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The following npm packages may be included in this product:
 
- - @langchain/anthropic@0.3.19
- - @langchain/core@0.3.50
- - @langchain/openai@0.5.8
+ - @langchain/anthropic@0.3.21
+ - @langchain/core@0.3.57
+ - @langchain/openai@0.5.11
 
 These packages each contain the following license:
 
@@ -6714,6 +6767,36 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
+ - ajv@6.12.6
+
+This package contains the following license:
+
+The MIT License (MIT)
+
+Copyright (c) 2015-2017 Evgeny Poberezkin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-----------
+
+The following npm package may be included in this product:
+
  - whatwg-url@5.0.0
 
 This package contains the following license:
@@ -6866,7 +6949,7 @@ SOFTWARE.
 
 The following npm package may be included in this product:
 
- - pino@9.6.0
+ - pino@9.7.0
 
 This package contains the following license:
 
@@ -7367,6 +7450,36 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-----------
+
+The following npm package may be included in this product:
+
+ - fast-json-stable-stringify@2.1.0
+
+This package contains the following license:
+
+This software is released under the MIT license:
+
+Copyright (c) 2017 Evgeny Poberezkin
+Copyright (c) 2013 James Halliday
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -----------
 
