@@ -7,14 +7,15 @@ export default {
           command: "npx",
           args: [
             "-y",
-            "@aethr/playwright-mcp@latest",
+            "@aethr/playwright-mcp@0.0.28-patch.0",
             ...["--browser", "chromium"],
             ...(process.env.CI ? ["--headless"] : []),
-            ...["--user-data-dir", "${TEMP_DIR}"], // ${TEMP_DIR} is given by Aethr per run and cleared after the run
+            ...["--isolated", "--no-sandbox"],
+            ...["--output-dir", "./outputs"],
+            ...["--save-trace"],
           ],
           env: {
             FORCE_COLOR: "0", // To avoid unnecessary color codes in the assertion failure message
-            TRACE: "./trace.zip", // Location to store the trace file
           },
           exclude: [
             "browser_close",

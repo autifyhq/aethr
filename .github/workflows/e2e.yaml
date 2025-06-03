@@ -45,10 +45,8 @@ jobs:
         run: npm ci
       - name: Run with ${{ matrix.model }}
         run: npm run start -- run examples/login.test.md
-      - name: Extract trace.zip (to avoid double zipping)
-        if: always()
-        run: mkdir -p trace && unzip trace.zip -d trace
       - name: Sanitize model without forward slashes
+        if: always()
         id: sanitize
         run: |
           MODEL=$(echo "${{ matrix.model }}" | tr '/' '_')
@@ -58,7 +56,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: trace-${{ steps.sanitize.outputs.model }}
-          path: trace
+          path: outputs/traces
       - name: Archive logs
         if: always()
         uses: actions/upload-artifact@v4

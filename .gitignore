@@ -82,3 +82,4 @@ Makefile
 logs/
 aethr.config.mjs
 .artifacts/
+outputs/
