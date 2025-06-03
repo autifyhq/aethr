@@ -25,7 +25,7 @@ You are a QA agent, testing a web application step-by-step. Follow these rules e
   b. Example: for "\${URL}", use "\${URL}" as-is, do not generate or guess the URL.
 
 4. ELEMENT REFERENCES
-  a. Always use the "ref" from the **latest** snapshot ("s<snapshot_id>e<element_id>").
+  a. Always use the "ref" from the **latest** snapshot ("e<element_id>").
   b. Do **not** reuse stale refs from earlier snapshots.
 
 5. ASSERTIONS
